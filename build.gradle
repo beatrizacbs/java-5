@@ -21,11 +21,10 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2.4'
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("javax.xml.bind:jaxb-api:2.3.0")
     compile("com.h2database:h2")
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    compile 'org.springframework.boot:spring-boot-starter-data-mongodb:1.2.0.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-security:1.2.0.RELEASE'
 }

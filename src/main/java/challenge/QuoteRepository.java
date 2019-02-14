@@ -1,16 +1,13 @@
 package challenge;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Component;
 
-@Component
-public interface QuoteRepository extends MongoRepository<Quote, Integer> {
+public interface QuoteRepository extends JpaRepository<Quote, Integer> {
 
     @Query("SELECT q FROM Quote q WHERE q.id = :id")
-    Quote getQuoteyId(@Param("id") int id);
-
+    public Quote getRandomQuote(@Param("id") Integer id);
 
 
 }
